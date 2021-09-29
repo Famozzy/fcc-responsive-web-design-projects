@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body,
+html {
+  font: 16px/1.5 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+.header {
+  color: #fff;
+  height: 100vh;
+  background: fixed no-repeat center / cover
+    url('https://i.imgur.com/JHekCjn.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+}
+.header h1 {
+  font-size: calc(2.5vw + 1.5rem);
+}
+.header span,
+.header h2 {
+  font-size: calc(1vw + 1rem);
+  font-weight: 300;
+}
+.scroll-down {
+  position: relative;
+  margin: 2em 0 0 3em;
+}
+.scroll-down::after,
+.scroll-down::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(135deg);
+  animation: float 1s infinite;
+}
+.scroll-down::before {
+  top: 1em;
+}
+@keyframes float {
+  50% {
+    transform: rotate(135deg) translate(0.5em, -0.5em);
+  }
+}
+.container {
+  max-width: 1080px;
+  margin: auto;
+}
+.about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.about figure {
+  flex: 1;
+}
+.about article {
+  flex: 1;
+}
+.about article h1,
+.timeline h1 {
+  font-size: calc(2vw + 1rem);
+  margin: 2rem 0;
+  line-height: 1.2;
+}
+figure figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5em;
+}
+figure img {
+  margin: auto;
+  display: block;
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  max-width: 55%;
+}
+.timeline {
+  text-align: center;
+  color: #fff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.timeline ul {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 400px;
+  position: relative;
+}
+.timeline ul::before {
+  content: '';
+  position: absolute;
+  left: -1.75em;
+  height: 96%;
+  border-right: 0.4em #fff solid;
+}
+.timeline-item::before {
+  content: '';
+  left: -2.43em;
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 1em;
+  background-color: #fff;
+}
+.timeline-item {
+  list-style: none;
+  margin: 1em 0;
+}
+footer {
+  text-align: center;
+  color: #fff;
+  background-color: hsl(0, 0%, 20%);
+  padding: 24px;
+}
+footer p a {
+  color: hsl(180, 70%, 50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .about {
+    padding: 3em;
+    height: auto;
+    flex-direction: column;
+  }
+}

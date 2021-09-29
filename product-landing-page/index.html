@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="nav-bar" id="nav-bar">
+        <div class="logo">
+          <img
+            id="header-img"
+            src="https://i.imgur.com/KCXqIR5.png"
+            referrerpolicy="no-referrer"
+            alt=""
+          />
+        </div>
+        <ul class="nav-list">
+          <li><a href="#about_us" class="nav-link">About Us</a></li>
+          <li><a href="#specifications" class="nav-link">Specifications</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <div class="hero-wrapper">
+          <h1 class="title">Mikrotik<br />CCR2004-Series</h1>
+          <p class="description">
+            This powerful and affordable router crushes all previous CCR models
+            in single-core performance. 16x Gigabit Ethernet ports, 2x10G SFP+
+            cages, active cooling and the best single-core performance per watt
+            & best overall performance per watt among all the CCR devices.
+          </p>
+          <form action="" id="form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your Email"
+            />
+            <input type="submit" id="submit" value="GET STARTED" />
+          </form>
+        </div>
+        <img
+          class="hero-img"
+          src="https://i.imgur.com/K53ICF3.png"
+          referrerpolicy="no-referrer"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="about_us" class="container">
+        <div class="container">
+          <h1>About Us</h1>
+          <p>
+            <i>MikroTik</i> is a <strong>Latvian company</strong> which was
+            founded in 1996 to develop routers and wireless ISP systems.
+            <i>MikroTik</i> now provides hardware and software for Internet
+            connectivity in most of the countries around the world. Our
+            experience in using industry standard PC hardware and complete
+            routing systems allowed us in 1997 to create the RouterOS software
+            system that provides extensive stability, controls, and flexibility
+            for all kinds of data interfaces and routing. In 2002 we decided to
+            make our own hardware, and the RouterBOARD brand was born. We have
+            resellers in most parts of the world, and customers in probably
+            every country on the planet. Our company is located in
+            <strong>Riga</strong>, the capital city of
+            <strong>Latvia</strong> and has more than 280 employees.
+          </p>
+        </div>
+      </section>
+
+      <section id="specifications" class="container">
+        <h1>Specifications</h1>
+        <table class="table-specs">
+          <tr>
+            <td>Architecture</td>
+            <td>ARM 64bit</td>
+          </tr>
+          <tr>
+            <td>CPU</td>
+            <td>AL32400</td>
+          </tr>
+          <tr>
+            <td>CPU core count</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>CPU nominal frequency</td>
+            <td>1700 MHz</td>
+          </tr>
+          <tr>
+            <td>RouterOS license</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Operation System</td>
+            <td>RouterOS (v7 only)</td>
+          </tr>
+          <tr>
+            <td>size of RAM</td>
+            <td>4 GB</td>
+          </tr>
+          <tr>
+            <td>Storage size</td>
+            <td>128 MB</td>
+          </tr>
+          <tr>
+            <td>Storage type</td>
+            <td>NAND</td>
+          </tr>
+          <tr>
+            <td>Ethernet Port</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>MTBF</td>
+            <td>Approximately 200'000 hours at 25C</td>
+          </tr>
+          <tr>
+            <td>Tested ambient temperature</td>
+            <td>-20°C to 60°C</td>
+          </tr>
+          <tr>
+            <td>IPsec hardware acceleration</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Number of USB ports</td>
+            <td>1</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="how_its_work" class="container video">
+        <iframe
+          id="video"
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/Cmt33XMLTqI?list=PLXr-HoBo2VtW_wGSlGyV58LvU3jHdqKY1"
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section id="pricing" class="container">
+        <h1>Pricing</h1>
+        <div class="grid">
+          <div class="product-card">
+            <h3>CCR-2004-16G-2S+</h3>
+            <img
+              src="https://i.imgur.com/xoQaLwg.jpg"
+              alt=""
+              referrerpolicy="no-referrer"
+            />
+            <span class="price">$465</span>
+            <button>ORDER</button>
+          </div>
+          <div class="product-card">
+            <h3>CCR-2004-1G-12S+2XS</h3>
+            <img
+              src="https://i.imgur.com/5WoWiNQ.jpg"
+              alt=""
+              referrerpolicy="no-referrer"
+            />
+            <span class="price">$595</span>
+            <button>ORDER</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <span>&copy; Created for freeCodeCamp</span>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Term Of Services</a></li>
+        <li><a href="https://mikrotik.com">Contact Us</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

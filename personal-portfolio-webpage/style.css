@@ -1,0 +1,247 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --first-color: hsl(225, 66%, 44%);
+  --white-color: hsl(230, 0%, 90%);
+  --black-color: hsl(230, 20%, 15%);
+  --bg-color: hsl(230, 10%, 10%);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font: 16px/1.5 'Montserrat', sans-serif;
+  color: var(--white-color);
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  z-index: 1;
+}
+img {
+  max-width: 100%;
+}
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+}
+a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.line {
+  height: 0.5rem;
+  width: 128px;
+  background-color: var(--white-color);
+}
+.nav-bar {
+  background-color: var(--first-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 4.5rem;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0px 1px 10px hsl(230, 15%, 10%);
+}
+.nav-list {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+.nav-list li {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.nav-burger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.logo {
+  display: block;
+  font-weight: bolder;
+  font-size: 1.7rem;
+}
+
+.hero {
+  height: 100vh;
+  background-color: var(--first-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 7%;
+}
+.hero::after,
+.projects::after,
+.projects::before {
+  content: '';
+  width: 120%;
+  height: 200px;
+  position: absolute;
+  left: -10%;
+  bottom: 0;
+  box-shadow: 0 6rem 4rem var(--first-color);
+}
+.projects::before {
+  bottom: unset;
+  top: 0;
+  box-shadow: 0 -4rem 4rem var(--first-color);
+  margin: 0;
+  z-index: 0;
+}
+.hero h1 {
+  font-size: calc(3vw + 1.4rem);
+  margin: 0;
+}
+.hero p {
+  margin: 0.5rem 0 0;
+  font-size: 2rem;
+}
+.container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 1rem;
+  margin: auto;
+}
+main > section {
+  margin: 10rem 0;
+}
+.title-section::before {
+  content: '';
+  display: block;
+  height: 100px;
+  margin-top: -80px;
+}
+.title-section {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.about {
+  text-align: center;
+  padding: 2rem 0 7rem;
+}
+.projects {
+  background-color: var(--first-color);
+  position: relative;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.project-tile {
+  border-radius: 0.7rem;
+  background-color: var(--black-color);
+  overflow: hidden;
+  z-index: 5;
+}
+.project-tile img {
+  background-color: var(--first-color);
+  object-position: center;
+  object-fit: cover;
+}
+.project-tile .wrapper {
+  padding: 1.2rem;
+}
+.wrapper h2 {
+  margin: 0;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.3rem;
+  padding: 0.2rem 0.5rem;
+  background-color: hsl(230, 58%, 33%);
+  border: 2px dotted var(--first-color);
+}
+
+form {
+  margin: auto;
+  max-width: 768px;
+}
+label {
+  font-size: 1.3rem;
+  margin: 0.2rem 0;
+  display: block;
+}
+input,
+button,
+textarea {
+  border-radius: 0.7rem;
+  color: inherit;
+  background-color: var(--black-color);
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: inherit;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  margin: 0.4rem 0;
+}
+
+textarea {
+  height: 192px;
+  resize: vertical;
+}
+button {
+  background-color: hsl(225, 66%, 44%);
+}
+button:active {
+  background-color: hsl(225, 46%, 44%);
+}
+footer {
+  background-color: hsl(230, 0%, 20%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact h2 {
+  font-size: 2rem;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+.profile li a {
+  font-size: 2em;
+}
+.profile li:hover a {
+  color: hsl(230, 0%, 70%);
+}
+.nav-list.active {
+  transform: scale(1);
+}
+@media only screen and (max-width: 1024px) {
+  .nav-list {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-burger {
+    display: block;
+  }
+  .nav-list {
+    transition: 0.3s;
+    transform: scale(0);
+    height: 90vh;
+    width: 100vw;
+    background-color: hsla(225, 55%, 40%, 0.96);
+    text-align: center;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 7.5%;
+  }
+}

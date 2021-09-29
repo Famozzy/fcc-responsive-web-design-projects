@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --first-color: hsl(250, 54%, 48%);
+  --white-color: hsl(0, 0%, 100%);
+  --white-second-color: hsl(0, 0%, 95%);
+}
+body,
+html {
+  background: linear-gradient(90deg, #f6f8fd 29px, transparent 1%) center,
+    linear-gradient(#f6f8fd 29px, transparent 1%) center, #bfc5d3;
+  background-size: 32px 32px;
+  background-attachment: fixed;
+  font: 17px/1.5 'Lato', sans-serif;
+}
+.container {
+  padding: 10vh 0;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center;
+}
+.header,
+form {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background-color: var(--white-color);
+  padding: 1.2em;
+  margin: 0 1em 1em;
+  border-radius: 0.8em;
+}
+
+label {
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  display: block;
+}
+
+.checkbox-label + label .input-checkbox label {
+  font-size: 1rem;
+}
+input,
+select,
+textarea,
+button {
+  margin: 0.4em 0 0;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  resize: vertical;
+  color: var(--first-color);
+  padding: 0.5em;
+  outline: none;
+  border: 2px solid transparent;
+  background-color: var(--white-second-color);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--first-color);
+}
+
+select {
+  padding: 0.65em 0.5em;
+}
+input[type='radio'],
+input[type='checkbox'] {
+  width: auto;
+  margin: 0 0.5em;
+}
+.form-group {
+  margin-bottom: 1em;
+}
+.title {
+  color: var(--first-color);
+  margin-bottom: 0.5em;
+}
+.comments-area {
+  height: 120px;
+}
+
+.submit-button {
+  color: #fff;
+  background-color: hsl(130, 54%, 52%);
+}
+.submit-button:active {
+  background-color: hsl(130, 45%, 50%);
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  label {
+    font: 0.7rem;
+  }
+}
